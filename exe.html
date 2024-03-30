@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download test.exe</title>
+</head>
+
+	<style>
+        body {
+            background-color: #000; /* Dark gray background color */
+            color: #fff; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+        a {
+            color: #fff; /* Link color */
+            text-decoration: none; /* Remove underline */
+        }
+        a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+        .icon-container {
+            width: 20%; /* Width of the container */
+            padding-top: 5%; /* Top padding (20% x 0.25) */
+            position: relative; /* Position relative for absolute positioning of image */
+        }
+        .icon {
+            width: 100%; /* Width of the image */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute; /* Position absolute for centering */
+            top: 0; /* Top position */
+            left: 0; /* Left position */
+            right: 0; /* Right position */
+            bottom: 0; /* Bottom position */
+            margin: auto; /* Center the image */
+        }
+    </style>
+
+<body>
+<script>
+// Function to trigger the download automatically
+function startDownload() {
+    var downloadLink = document.createElement('a');
+    downloadLink.href = 'test.exe'; // Update the file name and path as needed
+    downloadLink.download = 'test.exe'; // Update the file name as needed
+    downloadLink.click();
+}
+// Trigger the download automatically when the page loads
+window.onload = startDownload;
+</script>
+    <div class="icon-container">
+        <img class="icon" src="icon.png" alt="Icon">
+    </div>
+</body>
+</html>
